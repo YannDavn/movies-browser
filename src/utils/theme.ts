@@ -1,4 +1,9 @@
-export const theme = {
+export enum Themes {
+  light = "light",
+  dark = "dark",
+}
+
+export const themes: { [key in Themes]: any } = {
   light: {
     primary: "#FFFFFF",
     secondary: "#60A5FA",
