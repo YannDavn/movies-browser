@@ -1,4 +1,4 @@
-import { TMDBResult } from "../interfaces/movies.interface";
+import { MovieDetail, TMDBResult } from "../interfaces/movies.interface";
 
 export const request = async (url: string) => {
   const rawResult = await fetch(url);
@@ -18,4 +18,9 @@ export const getPopular = async (): Promise<TMDBResult> =>
 export const searchMovie = async (search: string): Promise<TMDBResult> =>
   request(
     `https://api.themoviedb.org/3/search/movie?query=${search}&api_key=${process.env.REACT_APP_API_KEY}`
+  );
+
+export const getMovieDetails = async (movieId: string): Promise<MovieDetail> =>
+  request(
+    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.REACT_APP_API_KEY}`
   );
