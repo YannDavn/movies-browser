@@ -14,13 +14,29 @@ const Div = styled.div`
   left: 0;
   width: 100%;
   background-color: ${(props) => props.theme.secondary};
+  display: flex;
+  flex-direction: row;
+`;
+
+const Title = styled.span`
+  font-size: 3rem;
+  color: white;
+  flex-grow: 1;
+  text-align: center;
+`;
+
+const SwitchParent = styled.div`
+  flex-grow: 0;
+  margin: auto 1rem auto 0;
 `;
 
 export const TopAppBar: FC<Props> = (props) => {
   return (
     <Div>
-      Test
-      <ThemeSwitch theme={props.theme} setTheme={props.setTheme} />
+      <Title>Movies</Title>
+      <SwitchParent>
+        <ThemeSwitch theme={props.theme} setTheme={props.setTheme} />
+      </SwitchParent>
     </Div>
   );
 };
