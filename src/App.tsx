@@ -14,6 +14,7 @@ const Container = styled.div`
   background-color: ${props => props.theme.primary};
   color: ${props => props.theme.text};
   min-height: 100vh;
+  transition: color 300ms, background-color 300ms;
 `;
 
 const App: FC = () => {
