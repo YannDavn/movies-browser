@@ -26,7 +26,6 @@ const DarkSwitchIcon = styled.img`
 export const ThemeSwitch: FC<Props> = ({theme, setTheme}: Props) => {
   const [checked, setChecked] = useState(false);
   useEffect(() => {
-    console.log('ui');
     if (checked) {
       setTheme(Themes.dark);
     } else {

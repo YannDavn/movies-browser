@@ -83,7 +83,12 @@ export const HomePage: FC<Props> = (_props) => {
         setReload={setReload}
       />
       <MoviesContainter>
-        {reload ? skeleton : movies.map((m) => <MovieCard movie={m} />)}
+        {/* If it is loading, display the skeleton */}
+        {reload && skeleton}
+        {/* If it is done loading, display the matching movies or a message if none was found */}
+        {!reload && movies.length
+          ? movies.map((m) => <MovieCard movie={m} />)
+          : "Aucun résultat"}
       </MoviesContainter>
     </Container>
   );

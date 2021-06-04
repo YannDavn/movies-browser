@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import styled from "styled-components";
 import { Movie } from "../interfaces/movies.interface";
 import { redirect } from "../utils/history";
