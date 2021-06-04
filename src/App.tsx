@@ -11,6 +11,9 @@ import { MovieDetailPage } from "./pages/MovieDetailPage";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  background-color: ${props => props.theme.primary};
+  color: ${props => props.theme.text};
+  height: 100vh;
 `;
 
 const App: FC = () => {
