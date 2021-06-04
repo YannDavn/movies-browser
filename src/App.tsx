@@ -13,7 +13,7 @@ const Container = styled.div`
   flex-direction: column;
   background-color: ${props => props.theme.primary};
   color: ${props => props.theme.text};
-  height: 100vh;
+  min-height: 100vh;
 `;
 
 const App: FC = () => {
