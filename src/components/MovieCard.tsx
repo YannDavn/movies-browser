@@ -8,8 +8,8 @@ interface Props {
 }
 
 const Container = styled.div`
-  height: 250px;
-  width: 150px;
+  height: 300px;
+  width: 200px;
   cursor: pointer;
   &:hover {
     > div {
@@ -19,8 +19,8 @@ const Container = styled.div`
 `;
 
 const TitleOverlay = styled.div`
-  height: 250px;
-  width: 150px;
+  height: 300px;
+  width: 200px;
   color: ${(props) => props.theme.text};
   background-color: ${(props) => props.theme.primary};
   opacity: 0;

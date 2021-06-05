@@ -25,14 +25,19 @@ const Container = styled.div`
 `;
 
 const MoviesContainter = styled.div`
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(5, 1fr);
+  @media (min-width: 992px) {
+    max-width: 70%;
   }
-  @media (max-width: 767px) {
-    grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 992px) {
+    max-width: 90%;
   }
-  display: grid;
-  grid-gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  > * {
+    margin: .5rem;
+  }
 `;
 
 /**
