@@ -47,7 +47,6 @@ const MoviesContainter = styled.div`
  * @returns {Promise<Array<Movie>>}
  */
 const fetchMovies = async (search?: string): Promise<Array<Movie>> => {
-  await new Promise((r) => setTimeout(r, 1000));
   let result: TMDBResult = search
     ? await searchMovie(search)
     : await getPopular();
