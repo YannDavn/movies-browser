@@ -87,7 +87,7 @@ export const HomePage: FC<Props> = (_props) => {
         {reload && skeleton}
         {/* If it is done loading, display the matching movies or a message if none was found */}
         {!reload && movies.length
-          ? movies.map((m) => <MovieCard movie={m} />)
+          ? movies.map((m, i) => <MovieCard key={`movie_${i}`} movie={m} />)
           : "Aucun résultat"}
       </MoviesContainter>
     </Container>
